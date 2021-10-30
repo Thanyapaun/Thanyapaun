@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Let's send an e-mail</h1>
+{% block content %}
+    <div class="container">
+        <form action="/index/" method="post">
+        {% csrf_token %}
+            <p></p>
+            <p>Your Name</p>
+            <input type="text" name="message_name"/>
+            <p></p>
+            <p>Your Email</p>
+            <input type="text" name="message_email"/>
+            <p></p>
+            <p>Message</p>
+            <input type="text" name="message"/>
+            <p></p>
+            <input type="submit" value="Send"/>
+        </form>
+    </div>
+{% endblock %}
+</body>
+</html>
